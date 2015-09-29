@@ -4,7 +4,7 @@
 #
 Name     : XStatic-term.js
 Version  : 0.0.4.2
-Release  : 4
+Release  : 5
 URL      : https://pypi.python.org/packages/source/X/XStatic-term.js/XStatic-term.js-0.0.4.2.tar.gz
 Source0  : https://pypi.python.org/packages/source/X/XStatic-term.js/XStatic-term.js-0.0.4.2.tar.gz
 Summary  : term.js 0.0.4 (XStatic packaging standard)
