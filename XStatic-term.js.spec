@@ -4,9 +4,9 @@
 #
 Name     : XStatic-term.js
 Version  : 0.0.7.0
-Release  : 12
-URL      : https://pypi.python.org/packages/source/X/XStatic-term.js/XStatic-term.js-0.0.7.0.tar.gz
-Source0  : https://pypi.python.org/packages/source/X/XStatic-term.js/XStatic-term.js-0.0.7.0.tar.gz
+Release  : 13
+URL      : http://pypi.debian.net/XStatic-term.js/XStatic-term.js-0.0.7.0.tar.gz
+Source0  : http://pypi.debian.net/XStatic-term.js/XStatic-term.js-0.0.7.0.tar.gz
 Summary  : term.js 0.0.7 (XStatic packaging standard)
 Group    : Development/Tools
 License  : MIT
@@ -14,12 +14,13 @@ Requires: XStatic-term.js-python
 BuildRequires : pbr
 BuildRequires : pip
 BuildRequires : python-dev
+BuildRequires : python3-dev
 BuildRequires : setuptools
 
 %description
-XStatic-termjs
 --------------
-term.js javascript library packaged for setuptools (easy_install) / pip.
+        
+        term.js javascript library packaged for setuptools (easy_install) / pip.
 
 %package python
 Summary: python components for the XStatic-term.js package.
@@ -34,15 +35,27 @@ python components for the XStatic-term.js package.
 %setup -q -n XStatic-term.js-0.0.7.0
 
 %build
+export http_proxy=http://127.0.0.1:9/
+export https_proxy=http://127.0.0.1:9/
+export no_proxy=localhost,127.0.0.1,0.0.0.0
+export LANG=C
+export SOURCE_DATE_EPOCH=1503089575
 python2 setup.py build -b py2
+python3 setup.py build -b py3
 
 %install
+export SOURCE_DATE_EPOCH=1503089575
 rm -rf %{buildroot}
-python2 -tt setup.py build -b py2 install --root=%{buildroot}
+python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
+python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
+echo ----[ mark ]----
+cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
+echo ----[ mark ]----
 
 %files
 %defattr(-,root,root,-)
 
 %files python
 %defattr(-,root,root,-)
-/usr/lib/python*/*
+/usr/lib/python2*/*
+/usr/lib/python3*/*
