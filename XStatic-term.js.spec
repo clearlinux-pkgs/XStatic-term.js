@@ -4,7 +4,7 @@
 #
 Name     : XStatic-term.js
 Version  : 0.0.7.0
-Release  : 20
+Release  : 21
 URL      : http://pypi.debian.net/XStatic-term.js/XStatic-term.js-0.0.7.0.tar.gz
 Source0  : http://pypi.debian.net/XStatic-term.js/XStatic-term.js-0.0.7.0.tar.gz
 Summary  : term.js 0.0.7 (XStatic packaging standard)
@@ -15,21 +15,9 @@ Requires: XStatic-term.js-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
 
 %description
-XStatic-termjs
 --------------
-
-term.js javascript library packaged for setuptools (easy_install) / pip.
-
-* term.js project: `Github chjj/term.js <https://github.com/chjj/term.js>`_
-* XStatic package: `Github takluyver/XStatic-termjs <https://github.com/takluyver/XStatic-termjs>`_
-
-This package is intended to be used by **any** project that needs these files.
-
-It intentionally does **not** provide any extra code except some metadata
-**nor** has any extra requirements. You MAY use some minimal support code from
-the XStatic base package, if you like.
-
-You can find more info about the xstatic packaging way in the package `XStatic`.
+        
+        term.js javascript library packaged for setuptools (easy_install) / pip.
 
 %package python
 Summary: python components for the XStatic-term.js package.
@@ -45,7 +33,7 @@ python components for the XStatic-term.js package.
 Summary: python3 components for the XStatic-term.js package.
 Group: Default
 Requires: python3-core
-Provides: pypi(XStatic-term.js)
+Provides: pypi(xstatic_term.js)
 
 %description python3
 python3 components for the XStatic-term.js package.
@@ -60,8 +48,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1582850010
-# -Werror is for werrorists
+export SOURCE_DATE_EPOCH=1583696242
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$CFLAGS -fno-lto "
