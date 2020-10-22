@@ -4,7 +4,7 @@
 #
 Name     : XStatic-term.js
 Version  : 0.0.7.0
-Release  : 22
+Release  : 23
 URL      : http://pypi.debian.net/XStatic-term.js/XStatic-term.js-0.0.7.0.tar.gz
 Source0  : http://pypi.debian.net/XStatic-term.js/XStatic-term.js-0.0.7.0.tar.gz
 Summary  : term.js 0.0.7 (XStatic packaging standard)
@@ -48,11 +48,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1583696242
+export SOURCE_DATE_EPOCH=1603409173
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
-export FCFLAGS="$CFLAGS -fno-lto "
-export FFLAGS="$CFLAGS -fno-lto "
+export FCFLAGS="$FFLAGS -fno-lto "
+export FFLAGS="$FFLAGS -fno-lto "
 export CXXFLAGS="$CXXFLAGS -fno-lto "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
