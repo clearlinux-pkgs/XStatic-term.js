@@ -7,7 +7,7 @@
 #
 Name     : XStatic-term.js
 Version  : 0.0.7.0
-Release  : 38
+Release  : 39
 URL      : http://pypi.debian.net/XStatic-term.js/XStatic-term.js-0.0.7.0.tar.gz
 Source0  : http://pypi.debian.net/XStatic-term.js/XStatic-term.js-0.0.7.0.tar.gz
 Summary  : term.js 0.0.7 (XStatic packaging standard)
